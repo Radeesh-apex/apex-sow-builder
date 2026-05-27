@@ -1,0 +1,6 @@
+export { en } from './en'
+export { ta } from './ta'
+export { es } from './es'
+export { fr } from './fr'
+export { de } from './de'
+export type { Translations } from './en'
