@@ -24,9 +24,10 @@ const patchMuiNotchedOutline: Plugin = {
 
 export default defineConfig({
   plugins: [react(), patchMuiNotchedOutline],
+  base:'/apex-sow-builder/',
   resolve: {
     alias: [
-      { find: '@apex-ui/components', replacement: path.resolve(__dirname, '../../apex-ui-components/src') },
+      { find: '@apex-ui/components', replacement: path.resolve(__dirname, 'src/components') },
       { find: '@', replacement: src },
       { find: '@assets', replacement: path.resolve(src, 'assets') },
       { find: '@core', replacement: path.resolve(src, 'core') },
