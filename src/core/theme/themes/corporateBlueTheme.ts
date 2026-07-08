@@ -5,12 +5,12 @@ export const corporateBlueTheme = createTheme({
     mode: 'light',
     primary: { 
       main: '#3b4b61', // Your Apex corporate color token 
-      light: '#4b5c75', 
+      light: '#534b75', 
       dark: '#2c3a4c', 
       contrastText: '#ffffff' 
     },
     secondary: { 
-      main: '#64748b' 
+      main: '#648b6a' 
     },
     background: { 
       default: '#f8fafc', // Clean light gray canvas
@@ -18,7 +18,8 @@ export const corporateBlueTheme = createTheme({
     },
     text: { 
       primary: '#1e293b',   
-      secondary: '#64748b' 
+      secondary: '#64748b',
+      disabled: '#94a3b8' 
     },
     divider: '#e2e8f0', 
   },

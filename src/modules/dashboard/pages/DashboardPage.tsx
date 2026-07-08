@@ -2,8 +2,8 @@ import { Box, Grid, Typography } from '@mui/material';
 import AddIcon from '@mui/icons-material/Add';
 import { useNavigate } from 'react-router-dom';
 
-import ApexButton from '@apex-ui/components/core-framework/ApexButton';
-import ApexTypography from '@apex-ui/components/core-framework/ApexTypography';
+import VrmaButton from '@apex-ui/components/core-framework/VrmaButton';
+import {VrmaTypography} from '@apex-ui/components/core-framework';
 import { PATHS } from '@core/router/routePaths';
 
 import { KpiGrid } from '@modules/dashboard/components/KpiCards';
@@ -26,12 +26,12 @@ export default function DashboardPage() {
         alignItems: 'flex-start', mb: 3, flexWrap: 'wrap', gap: 2,
       }}>
         <Box>
-          <ApexTypography variant="h5" fontWeight={700}>Dashboard</ApexTypography>
+          <VrmaTypography variant="h5" fontWeight={700}>Dashboard</VrmaTypography>
           <Typography variant="body2" sx={{ color: 'text.secondary', mt: 0.25 }}>
             Welcome back. Here&apos;s your pipeline at a glance.
           </Typography>
         </Box>
-        <ApexButton
+        <VrmaButton
           label="New SOW"
           startIcon={<AddIcon />}
           variant="contained"

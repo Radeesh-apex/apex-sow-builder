@@ -8,3 +8,90 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+/* VrmaSidebar styling to match AppSidebar design */
+.MuiDrawer-paper {
+  background-color: #ffffff !important;
+  border: none !important;
+}
+
+/* Header with dark background */
+.MuiDrawer-paper > div > div:first-of-type {
+  background-color: #3b4b61 !important;
+  min-height: 52px !important;
+  padding: 8px 12px !important;
+  border-bottom: none !important;
+}
+
+/* Scrollable content area */
+.MuiDrawer-paper .MuiBox-root[style*="overflow"] {
+  padding: 12px 8px !important;
+}
+
+/* Section titles */
+.MuiDrawer-paper .MuiTypography-caption {
+  font-size: 0.65rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.08em !important;
+  text-transform: uppercase !important;
+  color: #999999 !important;
+}
+
+/* List items */
+.MuiDrawer-paper .MuiListItemButton-root {
+  border-radius: 0 20px 20px 0 !important;
+  margin-right: 8px !important;
+  margin-bottom: 4px !important;
+  padding: 9.6px 16px !important;
+  position: relative;
+  color: #666666 !important;
+}
+
+.MuiDrawer-paper .MuiListItemIcon-root {
+  color: #666666 !important;
+  min-width: 36px !important;
+  transition: all 0.2s ease !important;
+}
+
+.MuiDrawer-paper .MuiListItemText-primary {
+  font-size: 14px !important;
+  font-weight: 500 !important;
+}
+
+/* Hover state */
+.MuiDrawer-paper .MuiListItemButton-root:hover {
+  background-color: rgba(0, 0, 0, 0.04) !important;
+  color: #1976d2 !important;
+}
+
+.MuiDrawer-paper .MuiListItemButton-root:hover .MuiListItemIcon-root {
+  color: #1976d2 !important;
+}
+
+/* Active/Selected state */
+.MuiDrawer-paper .MuiListItemButton-root.Mui-selected {
+  background-color: rgba(59, 75, 97, 0.08) !important;
+  color: #3b4b61 !important;
+  font-weight: 600 !important;
+}
+
+.MuiDrawer-paper .MuiListItemButton-root.Mui-selected .MuiListItemIcon-root {
+  color: #3b4b61 !important;
+}
+
+.MuiDrawer-paper .MuiListItemButton-root.Mui-selected::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background-color: #3b4b61;
+  border-radius: 0 4px 4px 0;
+}
+
+.MuiDrawer-paper .MuiListItemButton-root.Mui-selected:hover {
+  background-color: rgba(59, 75, 97, 0.14) !important;
+}
+
+

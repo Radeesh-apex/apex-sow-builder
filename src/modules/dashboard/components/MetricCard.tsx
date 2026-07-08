@@ -1,8 +1,8 @@
 import React from 'react';
 import { Box, Typography, alpha } from '@mui/material';
 import TrendingUpIcon from '@mui/icons-material/TrendingUp';
-import ApexAdvancedCard from '@apex-ui/components/core-framework/ApexAdvancedCard';
-import ApexTypography from '@apex-ui/components/core-framework/ApexTypography';
+import VrmaAdvancedCard from '@apex-ui/components/core-framework/VrmaAdvancedCard';
+import VrmaTypography from '@apex-ui/components/core-framework/VrmaTypography';
 
 interface MetricCardProps {
   title: string;
@@ -17,7 +17,7 @@ export const MetricCard: React.FC<MetricCardProps> = ({
   title, value, subtitle, trend, icon, accent 
 }) => {
   return (
-    <ApexAdvancedCard
+    <VrmaAdvancedCard
       hoverEffect
       sx={{ p: 0, height: '100%', position: 'relative', overflow: 'hidden' }}
     >
@@ -38,9 +38,9 @@ export const MetricCard: React.FC<MetricCardProps> = ({
             }}>
               {title}
             </Typography>
-            <ApexTypography variant="h4" fontWeight={700} sx={{ lineHeight: 1.2 }}>
+            <VrmaTypography variant="h4" fontWeight={700} sx={{ lineHeight: 1.2 }}>
               {value}
-            </ApexTypography>
+            </VrmaTypography>
             <Typography variant="body2" sx={{ color: 'text.secondary', mt: 0.5 }}>
               {subtitle}
             </Typography>
@@ -63,6 +63,6 @@ export const MetricCard: React.FC<MetricCardProps> = ({
           </Box>
         </Box>
       </Box>
-    </ApexAdvancedCard>
+    </VrmaAdvancedCard>
   );
 };
