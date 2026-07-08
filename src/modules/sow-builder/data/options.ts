@@ -14,7 +14,6 @@ import ComputerIcon from '@mui/icons-material/Computer';
 export interface IndustryOption {
   id: string;
   label: string;
-  // Type signature allowing direct component storage
   icon: React.ComponentType<{ sx?: any }>;
 }
 
@@ -22,6 +21,8 @@ export interface CapabilityOption {
   id: string;
   label: string;
   countLabel?: string;
+  associatedIndustries: string[];
+  isCustom?: boolean;
 }
 
 export const INDUSTRY_OPTIONS: IndustryOption[] = [
@@ -36,12 +37,50 @@ export const INDUSTRY_OPTIONS: IndustryOption[] = [
 ];
 
 export const CAPABILITY_OPTIONS: CapabilityOption[] = [
-  { id: 'managed-support', label: 'Managed Support', countLabel: '12 SOWs' },
-  { id: 'cloud-managed', label: 'Cloud Managed Services' },
-  { id: 'erp-managed', label: 'ERP Managed Services' },
-  { id: 'cybersecurity', label: 'Cybersecurity' },
-  { id: 'data-analytics', label: 'Data & Analytics' },
-  { id: 'digital-transform', label: 'Digital Transformation' },
-  { id: 'app-management', label: 'Application Management' },
-  { id: 'workforce-services', label: 'Workforce Services' },
+  {
+    id: 'managed-support',
+    label: 'Managed Support',
+    associatedIndustries: ['healthcare', 'financial', 'retail', 'public-sector', 'technology']
+  },
+  {
+    id: 'cloud-managed',
+    label: 'Cloud Managed Services',
+    associatedIndustries: ['technology', 'financial', 'retail', 'energy', 'public-sector']
+  },
+  {
+    id: 'erp-managed',
+    label: 'ERP Managed Services',
+    associatedIndustries: ['manufacturing', 'logistics', 'retail']
+  },
+  {
+    id: 'cybersecurity',
+    label: 'Cybersecurity',
+    associatedIndustries: ['financial', 'healthcare', 'public-sector', 'technology']
+  },
+  {
+    id: 'data-analytics',
+    label: 'Data & Analytics',
+    associatedIndustries: ['financial', 'healthcare', 'retail', 'technology', 'manufacturing']
+  },
+  {
+    id: 'digital-transform',
+    label: 'Digital Transformation',
+    associatedIndustries: ['manufacturing', 'retail', 'financial', 'energy']
+  },
+  {
+    id: 'app-management',
+    label: 'Application Management',
+    associatedIndustries: ['technology', 'financial', 'healthcare', 'public-sector']
+  },
+  {
+    id: 'workforce-services',
+    label: 'Workforce Services',
+    associatedIndustries: ['manufacturing', 'logistics', 'public-sector', 'healthcare']
+  },
+  {
+    id: 'custom-capability',
+    label: 'Other Capability',
+    associatedIndustries: ['healthcare', 'financial', 'manufacturing', 'retail', 'public-sector', 'energy', 'logistics', 'technology'],
+    isCustom: true
+  },
 ];

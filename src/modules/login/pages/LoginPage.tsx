@@ -1,9 +1,9 @@
 import { useNavigate } from 'react-router-dom'
 import { Box, Link as MuiLink } from '@mui/material'
-import ApexCard from '@apex-ui/components/core-framework/ApexCard'
-import ApexTextField from '@apex-ui/components/core-framework/ApexTextField'
-import ApexAdvancedButton from '@apex-ui/components/core-framework/ApexAdvancedButton'
-import ApexTypography from '@apex-ui/components/core-framework/ApexTypography'
+import VrmaCard from '@apex-ui/components/core-framework/VrmaCard'
+import VrmaTextField from '@apex-ui/components/core-framework/VrmaTextField'
+import VrmaAdvancedButton from '@apex-ui/components/core-framework/VrmaAdvancedButton'
+import VrmaTypography from '@apex-ui/components/core-framework/VrmaTypography'
 import { useI18n } from '@core/i18n'
 import { PATHS } from '@core/router/routePaths'
 import { useLogin } from '../hooks/useLogin'
@@ -26,30 +26,30 @@ export default function LoginPage() {
       }}
     >
       <Box sx={{ width: '100%', maxWidth: 440 }}>
-        <ApexCard elevation={4} borderRadius={4} backgroundColor="#ffffff" centerContent={false} sx={{ p: { xs: 3, sm: 4 } }}>
+        <VrmaCard elevation={4} borderRadius={4} backgroundColor="#ffffff" centerContent={false} sx={{ p: { xs: 3, sm: 4 } }}>
           <Box
             component="form"
             onSubmit={(e) => { e.preventDefault(); handleSubmit() }}
             sx={{ display: 'flex', flexDirection: 'column', gap: 2.5 }}
           >
             <Box sx={{ textAlign: 'center', mb: 1 }}>
-              <ApexTypography variant="h5" fontWeight={700} margin="0 0 6px">
+              <VrmaTypography variant="h5" fontWeight={700} margin="0 0 6px">
                 {t.login.title}
-              </ApexTypography>
-              <ApexTypography variant="body2" color="#64748b" fontSize={14} margin="0">
+              </VrmaTypography>
+              <VrmaTypography variant="body2" color="#64748b" fontSize={14} margin="0">
                 {t.login.subtitle}
-              </ApexTypography>
+              </VrmaTypography>
             </Box>
 
             {visibleErrors.general && (
               <Box sx={{ bgcolor: '#fef2f2', border: '1px solid #fecaca', borderRadius: 1.5, px: 2, py: 1.5 }}>
-                <ApexTypography variant="body2" color="#b91c1c" fontSize={13} margin="0">
+                <VrmaTypography variant="body2" color="#b91c1c" fontSize={13} margin="0">
                   {t.login.invalidCredentials}
-                </ApexTypography>
+                </VrmaTypography>
               </Box>
             )}
 
-            <ApexTextField
+            <VrmaTextField
               label={t.login.email}
               type="email"
               value={fields.email}
@@ -59,7 +59,7 @@ export default function LoginPage() {
               error={Boolean(visibleErrors.email)} helperText={visibleErrors.email}
             />
 
-            <ApexTextField
+            <VrmaTextField
               label={t.login.password}
               type="password"
               value={fields.password}
@@ -69,7 +69,7 @@ export default function LoginPage() {
               error={Boolean(visibleErrors.password)} helperText={visibleErrors.password}
             />
 
-            <ApexAdvancedButton
+            <VrmaAdvancedButton
               label={t.login.signIn}
               onClick={handleSubmit}
               loadingText={t.login.signingIn}
@@ -78,7 +78,7 @@ export default function LoginPage() {
             />
 
             <Box sx={{ textAlign: 'center', mt: 0.5 }}>
-              <ApexTypography variant="body2" color="#64748b" fontSize={13} margin="0">
+              <VrmaTypography variant="body2" color="#64748b" fontSize={13} margin="0">
                 {t.login.noAccount}{' '}
                 <MuiLink
                   component="button"
@@ -89,10 +89,10 @@ export default function LoginPage() {
                 >
                   {t.login.createOne}
                 </MuiLink>
-              </ApexTypography>
+              </VrmaTypography>
             </Box>
           </Box>
-        </ApexCard>
+        </VrmaCard>
       </Box>
     </Box>
   )

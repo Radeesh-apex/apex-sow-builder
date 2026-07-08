@@ -1,10 +1,10 @@
 import { Box } from '@mui/material'
-import ApexCard from '@apex-ui/components/core-framework/ApexCard'
+import VrmaCard from '@apex-ui/components/core-framework/VrmaCard'
 import ApexCheckbox from '@apex-ui/components/core-framework/ApexCheckbox'
 import ApexSelect from '@apex-ui/components/core-framework/ApexSelect'
-import ApexTextField from '@apex-ui/components/core-framework/ApexTextField'
-import ApexAdvancedButton from '@apex-ui/components/core-framework/ApexAdvancedButton'
-import ApexTypography from '@apex-ui/components/core-framework/ApexTypography'
+import VrmaTextField from '@apex-ui/components/core-framework/VrmaTextField'
+import VrmaAdvancedButton from '@apex-ui/components/core-framework/VrmaAdvancedButton'
+import VrmaTypography from '@apex-ui/components/core-framework/VrmaTypography'
 import { useI18n } from '@core/i18n'
 import { useRegistration } from '../hooks/useRegistration'
 
@@ -31,21 +31,21 @@ export default function RegistrationPage() {
 
   return (
     <Box sx={{ maxWidth: 680, mx: 'auto', py: 4 }}>
-      <ApexCard elevation={4} borderRadius={4} backgroundColor="#ffffff" centerContent={false} sx={{ p: { xs: 2.5, sm: 4 } }}>
+      <VrmaCard elevation={4} borderRadius={4} backgroundColor="#ffffff" centerContent={false} sx={{ p: { xs: 2.5, sm: 4 } }}>
         <Box
           component="form"
           onSubmit={(e) => { e.preventDefault(); handleSubmit() }}
           sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}
         >
-          <ApexTypography variant="h5" fontWeight={700} margin="0 0 4px">
+          <VrmaTypography variant="h5" fontWeight={700} margin="0 0 4px">
             {t.registration.title}
-          </ApexTypography>
-          <ApexTypography variant="body2" color="#64748b" fontSize={14} margin="0 0 20px">
+          </VrmaTypography>
+          <VrmaTypography variant="body2" color="#64748b" fontSize={14} margin="0 0 20px">
             {t.registration.subtitle}
-          </ApexTypography>
+          </VrmaTypography>
 
           <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', sm: 'repeat(2, 1fr)' }, gap: 2, mb: 1 }}>
-            <ApexTextField
+            <VrmaTextField
               label={t.registration.firstName}
               value={fields.firstName}
               onChange={(v) => { if (typeof v === 'string') handleFieldChange('firstName', v) }}
@@ -53,7 +53,7 @@ export default function RegistrationPage() {
               fullWidth size="medium" variant="outlined" labelSize={14} inputFontSize={14}
               error={Boolean(visibleErrors.firstName)} helperText={visibleErrors.firstName}
             />
-            <ApexTextField
+            <VrmaTextField
               label={t.registration.lastName}
               value={fields.lastName}
               onChange={(v) => { if (typeof v === 'string') handleFieldChange('lastName', v) }}
@@ -63,7 +63,7 @@ export default function RegistrationPage() {
             />
           </Box>
 
-          <ApexTextField
+          <VrmaTextField
             label={t.registration.email}
             value={fields.email}
             onChange={(v) => { if (typeof v === 'string') handleFieldChange('email', v) }}
@@ -74,7 +74,7 @@ export default function RegistrationPage() {
           />
 
           <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', sm: 'repeat(2, 1fr)' }, gap: 2, mb: 1 }}>
-            <ApexTextField
+            <VrmaTextField
               label={t.registration.password}
               value={fields.password}
               onChange={(v) => { if (typeof v === 'string') handleFieldChange('password', v) }}
@@ -82,7 +82,7 @@ export default function RegistrationPage() {
               fullWidth type="password" labelSize={14} inputFontSize={14}
               error={Boolean(visibleErrors.password)} helperText={visibleErrors.password}
             />
-            <ApexTextField
+            <VrmaTextField
               label={t.registration.confirmPassword}
               value={fields.confirmPassword}
               onChange={(v) => { if (typeof v === 'string') handleFieldChange('confirmPassword', v) }}
@@ -100,7 +100,7 @@ export default function RegistrationPage() {
                 fullWidth width="100%" size="medium" labelSize={14}
               />
               {visibleErrors.role && (
-                <ApexTypography variant="caption" color="#b91c1c" sx={{ mt: 0.5 }}>{visibleErrors.role}</ApexTypography>
+                <VrmaTypography variant="caption" color="#b91c1c" sx={{ mt: 0.5 }}>{visibleErrors.role}</VrmaTypography>
               )}
             </Box>
             <Box sx={{ display: 'flex', flexDirection: 'column', gap: 0.5 }}>
@@ -110,7 +110,7 @@ export default function RegistrationPage() {
                 fullWidth width="100%" size="medium" labelSize={14}
               />
               {visibleErrors.department && (
-                <ApexTypography variant="caption" color="#b91c1c" sx={{ mt: 0.5 }}>{visibleErrors.department}</ApexTypography>
+                <VrmaTypography variant="caption" color="#b91c1c" sx={{ mt: 0.5 }}>{visibleErrors.department}</VrmaTypography>
               )}
             </Box>
           </Box>
@@ -124,9 +124,9 @@ export default function RegistrationPage() {
                 size="small" customSize={18} labelSize={13} labelColor="#334155" labelPosition="right"
               />
               {visibleErrors.agreeTerms && (
-                <ApexTypography variant="caption" color="#b91c1c" sx={{ ml: 4, mt: 0.5 }}>
+                <VrmaTypography variant="caption" color="#b91c1c" sx={{ ml: 4, mt: 0.5 }}>
                   {visibleErrors.agreeTerms}
-                </ApexTypography>
+                </VrmaTypography>
               )}
             </Box>
             <ApexCheckbox
@@ -138,25 +138,25 @@ export default function RegistrationPage() {
           </Box>
 
           {feedbackMessage && (
-            <ApexTypography
+            <VrmaTypography
               variant="body2"
               color={isFormValid ? '#0f766e' : '#b91c1c'}
               fontSize={14}
               margin="0 0 12px"
             >
               {feedbackMessage}
-            </ApexTypography>
+            </VrmaTypography>
           )}
 
           <Box sx={{ display: 'flex', gap: 2, flexWrap: 'wrap', alignItems: 'center', mt: 1 }}>
-            <ApexAdvancedButton
+            <VrmaAdvancedButton
               label={t.registration.createAccount}
               onClick={() => handleSubmit()}
               loadingText={t.registration.signingUp}
               disabled={isSubmitting}
               sx={{ flex: 1, minWidth: 160 }}
             />
-            <ApexAdvancedButton
+            <VrmaAdvancedButton
               label={t.common.reset}
               onClick={resetForm}
               variant="outlined"
@@ -165,7 +165,7 @@ export default function RegistrationPage() {
             />
           </Box>
         </Box>
-      </ApexCard>
+      </VrmaCard>
     </Box>
   )
 }

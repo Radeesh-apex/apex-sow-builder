@@ -3,9 +3,9 @@ import BuildIcon from '@mui/icons-material/Build'
 import CloudIcon from '@mui/icons-material/Cloud'
 import SecurityIcon from '@mui/icons-material/Security'
 import SupportAgentIcon from '@mui/icons-material/SupportAgent'
-import ApexAdvancedCard from '@apex-ui/components/core-framework/ApexAdvancedCard'
-import ApexAdvancedButton from '@apex-ui/components/core-framework/ApexAdvancedButton'
-import ApexTypography from '@apex-ui/components/core-framework/ApexTypography'
+import VrmaAdvancedCard from '@apex-ui/components/core-framework/VrmaAdvancedCard'
+import VrmaAdvancedButton from '@apex-ui/components/core-framework/VrmaAdvancedButton'
+import VrmaTypography from '@apex-ui/components/core-framework/VrmaTypography'
 import { useI18n } from '@core/i18n'
 
 const SERVICE_ICONS = [
@@ -28,19 +28,19 @@ export default function ServicesPage() {
   return (
     <Box>
       <Box sx={{ display: 'flex', flexDirection: 'column', mb: 4 }}>
-        <ApexTypography variant="h4" fontWeight={700} margin="0 0 4px">{t.services.title}</ApexTypography>
-        <ApexTypography variant="body1" color="text.secondary" margin="0">{t.services.subtitle}</ApexTypography>
+        <VrmaTypography variant="h4" fontWeight={700} margin="0 0 4px">{t.services.title}</VrmaTypography>
+        <VrmaTypography variant="body1" color="text.secondary" margin="0">{t.services.subtitle}</VrmaTypography>
       </Box>
 
       <Grid container spacing={3}>
         {services.map(({ Icon, title, color, description }) => (
           <Grid key={title} size={{ xs: 12, sm: 6, md: 3 }}>
-            <ApexAdvancedCard
+            <VrmaAdvancedCard
               elevation={1}
               hoverEffect
               height="100%"
               footer={
-                <ApexAdvancedButton
+                <VrmaAdvancedButton
                   label={t.common.next}
                   variant="text"
                   size="small"
@@ -50,10 +50,10 @@ export default function ServicesPage() {
             >
               <Box sx={{ display: 'flex', flexDirection: 'column' }}>
                 <Box sx={{ color, mb: 2, display: 'flex' }}><Icon sx={{ fontSize: 40 }} /></Box>
-                <ApexTypography variant="h6" fontWeight={600} margin="0 0 8px">{title}</ApexTypography>
-                <ApexTypography variant="body2" color="text.secondary" margin="0">{description}</ApexTypography>
+                <VrmaTypography variant="h6" fontWeight={600} margin="0 0 8px">{title}</VrmaTypography>
+                <VrmaTypography variant="body2" color="text.secondary" margin="0">{description}</VrmaTypography>
               </Box>
-            </ApexAdvancedCard>
+            </VrmaAdvancedCard>
           </Grid>
         ))}
       </Grid>

@@ -2,10 +2,10 @@ import React from 'react';
 import { Box, Typography, Avatar, LinearProgress, alpha, useTheme } from '@mui/material';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
-import ApexAdvancedCard from '@apex-ui/components/core-framework/ApexAdvancedCard';
-import ApexButton from '@apex-ui/components/core-framework/ApexButton';
-import ApexChip from '@apex-ui/components/core-framework/ApexChip';
-import ApexTypography from '@apex-ui/components/core-framework/ApexTypography';
+import VrmaAdvancedCard from '@apex-ui/components/core-framework/VrmaAdvancedCard';
+import VrmaButton from '@apex-ui/components/core-framework/VrmaButton';
+import VrmaChip from '@apex-ui/components/core-framework/VrmaChip';
+import VrmaTypography from '@apex-ui/components/core-framework/VrmaTypography';
 import { MOCK_SOWS } from '../services/mockData';
 import type { SOWRecord } from '../services/mockData';
 
@@ -25,11 +25,11 @@ export const MySowsCard: React.FC<MySowsCardProps> = ({ onNavigateToSows }) => {
   const theme = useTheme();
 
   return (
-    <ApexAdvancedCard
+    <VrmaAdvancedCard
       header={
         <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '100%' }}>
-          <ApexTypography variant="subtitle1" fontWeight={700}>My SOWs</ApexTypography>
-          <ApexButton
+          <VrmaTypography variant="subtitle1" fontWeight={700}>My SOWs</VrmaTypography>
+          <VrmaButton
             label="View all"
             variant="text"
             size="small"
@@ -92,7 +92,7 @@ export const MySowsCard: React.FC<MySowsCardProps> = ({ onNavigateToSows }) => {
               </Typography>
             </Box>
 
-            <ApexChip
+            <VrmaChip
               label={sow.status}
               fontSize="0.68rem"
               bgColor={statusConfig.bg}
@@ -106,6 +106,6 @@ export const MySowsCard: React.FC<MySowsCardProps> = ({ onNavigateToSows }) => {
           </Box>
         );
       })}
-    </ApexAdvancedCard>
+    </VrmaAdvancedCard>
   );
 };

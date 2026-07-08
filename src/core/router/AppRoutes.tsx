@@ -27,7 +27,7 @@ export function AppRoutes() {
               <Route path={PATHS.sowList}    element={<HomePage />} />
               <Route path={PATHS.clients}    element={<div />} />
               <Route path={PATHS.resources}  element={<div />} />
-              <Route path={PATHS.pricing}    element={<div />} />
+              <Route path={PATHS.pricing}    element={<ContactPage/>} />
               <Route path={PATHS.approvals}  element={<div />} />
               <Route path={PATHS.settings}   element={<div />} />
               <Route path={PATHS.notFound}   element={<NotFoundPage />} />

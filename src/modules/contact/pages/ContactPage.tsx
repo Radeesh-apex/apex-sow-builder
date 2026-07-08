@@ -1,10 +1,10 @@
 import { Box, Grid, Alert } from '@mui/material'
 import SendIcon from '@mui/icons-material/Send'
-import ApexTextField from '@apex-ui/components/core-framework/ApexTextField'
-import ApexAdvancedButton from '@apex-ui/components/core-framework/ApexAdvancedButton'
-import ApexTypography from '@apex-ui/components/core-framework/ApexTypography'
-import ApexCard from '@apex-ui/components/core-framework/ApexCard'
-import ApexNotificationMessage from '@apex-ui/components/core-framework/ApexNotificationMessage'
+import VrmaTextField from '@apex-ui/components/core-framework/VrmaTextField'
+import VrmaAdvancedButton from '@apex-ui/components/core-framework/VrmaAdvancedButton'
+import VrmaTypography from '@apex-ui/components/core-framework/VrmaTypography'
+import VrmaCard from '@apex-ui/components/core-framework/VrmaCard'
+import VrmaNotificationMessage from '@apex-ui/components/core-framework/VrmaNotificationMessage'
 import { useContactForm } from '../hooks/useContactForm'
 import { useI18n } from '@core/i18n'
 
@@ -15,11 +15,11 @@ export default function ContactPage() {
   return (
     <Box>
       <Box sx={{ display: 'flex', flexDirection: 'column', mb: 4 }}>
-        <ApexTypography variant="h4" fontWeight={700} margin="0 0 4px">{t.contact.title}</ApexTypography>
-        <ApexTypography variant="body1" color="text.secondary" margin="0">{t.contact.subtitle}</ApexTypography>
+        <VrmaTypography variant="h4" fontWeight={700} margin="0 0 4px">{t.contact.title}</VrmaTypography>
+        <VrmaTypography variant="body1" color="text.secondary" margin="0">{t.contact.subtitle}</VrmaTypography>
       </Box>
 
-      <ApexCard elevation={1} centerContent={false} padding={4} sx={{ maxWidth: 640 }}>
+      <VrmaCard elevation={1} centerContent={false} padding={4} sx={{ maxWidth: 640 }}>
         {apiError && (
           <Alert severity="error" sx={{ mb: 3 }} onClose={reset}>
             {apiError.message}
@@ -29,7 +29,7 @@ export default function ContactPage() {
         <Box component="form" onSubmit={(e) => { e.preventDefault(); submit() }} noValidate>
           <Grid container spacing={2}>
             <Grid size={{ xs: 12, sm: 6 }}>
-              <ApexTextField
+              <VrmaTextField
                 label={t.contact.name}
                 fullWidth required
                 value={form.name}
@@ -39,7 +39,7 @@ export default function ContactPage() {
               />
             </Grid>
             <Grid size={{ xs: 12, sm: 6 }}>
-              <ApexTextField
+              <VrmaTextField
                 label={t.contact.email}
                 type="email" fullWidth required
                 value={form.email}
@@ -49,7 +49,7 @@ export default function ContactPage() {
               />
             </Grid>
             <Grid size={{ xs: 12 }}>
-              <ApexTextField
+              <VrmaTextField
                 label={t.contact.subject}
                 fullWidth required
                 value={form.subject}
@@ -59,7 +59,7 @@ export default function ContactPage() {
               />
             </Grid>
             <Grid size={{ xs: 12 }}>
-              <ApexTextField
+              <VrmaTextField
                 label={t.contact.message}
                 multiline rows={5} fullWidth required
                 value={form.message}
@@ -69,7 +69,7 @@ export default function ContactPage() {
               />
             </Grid>
             <Grid size={{ xs: 12 }}>
-              <ApexAdvancedButton
+              <VrmaAdvancedButton
                 label={t.contact.send}
                 onClick={async () => { await submit() }}
                 loadingText={t.contact.sending}
@@ -78,9 +78,9 @@ export default function ContactPage() {
             </Grid>
           </Grid>
         </Box>
-      </ApexCard>
+      </VrmaCard>
 
-      <ApexNotificationMessage
+      <VrmaNotificationMessage
         open={status === 'success'}
         onClose={reset}
         severity="success"

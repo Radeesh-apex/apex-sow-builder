@@ -3,9 +3,9 @@ import { Box, Typography, alpha, useTheme } from '@mui/material';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import AutoAwesomeIcon from '@mui/icons-material/AutoAwesome';
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
-import ApexAdvancedCard from '@apex-ui/components/core-framework/ApexAdvancedCard';
-import ApexButton from '@apex-ui/components/core-framework/ApexButton';
-import ApexTypography from '@apex-ui/components/core-framework/ApexTypography';
+import VrmaAdvancedCard from '@apex-ui/components/core-framework/VrmaAdvancedCard';
+import VrmaButton from '@apex-ui/components/core-framework/VrmaButton';
+import VrmaTypography from '@apex-ui/components/core-framework/VrmaTypography';
 import { MOCK_TEMPLATES } from '../services/mockData';
 
 interface RecentTemplatesCardProps {
@@ -16,11 +16,11 @@ export const RecentTemplatesCard: React.FC<RecentTemplatesCardProps> = ({ onUseT
   const theme = useTheme();
 
   return (
-    <ApexAdvancedCard
+    <VrmaAdvancedCard
       header={
         <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '100%' }}>
-          <ApexTypography variant="subtitle1" fontWeight={700}>Recent Templates</ApexTypography>
-          <ApexButton
+          <VrmaTypography variant="subtitle1" fontWeight={700}>Recent Templates</VrmaTypography>
+          <VrmaButton
             label="View all"
             variant="text"
             size="small"
@@ -56,7 +56,7 @@ export const RecentTemplatesCard: React.FC<RecentTemplatesCardProps> = ({ onUseT
           <Typography variant="caption" sx={{ color: 'text.disabled', flexShrink: 0 }}>
             Used {tmpl.timesUsed}×
           </Typography>
-          <ApexButton
+          <VrmaButton
             label="Use"
             size="small"
             variant="outlined"
@@ -69,6 +69,6 @@ export const RecentTemplatesCard: React.FC<RecentTemplatesCardProps> = ({ onUseT
           />
         </Box>
       ))}
-    </ApexAdvancedCard>
+    </VrmaAdvancedCard>
   );
 };

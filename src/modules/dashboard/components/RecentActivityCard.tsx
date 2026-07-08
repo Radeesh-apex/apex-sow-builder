@@ -1,15 +1,15 @@
 import React from 'react';
 import { Box, Typography, Avatar, alpha, useTheme } from '@mui/material';
-import ApexAdvancedCard from '@apex-ui/components/core-framework/ApexAdvancedCard';
-import ApexTypography from '@apex-ui/components/core-framework/ApexTypography';
+import VrmaAdvancedCard from '@apex-ui/components/core-framework/VrmaAdvancedCard';
+import VrmaTypography from '@apex-ui/components/core-framework/VrmaTypography';
 import { MOCK_ACTIVITIES } from '../services/mockData';
 
 export const RecentActivityCard: React.FC = () => {
   const theme = useTheme();
 
   return (
-    <ApexAdvancedCard
-      header={<ApexTypography variant="subtitle1" fontWeight={700}>Recent Activity</ApexTypography>}
+    <VrmaAdvancedCard
+      header={<VrmaTypography variant="subtitle1" fontWeight={700}>Recent Activity</VrmaTypography>}
       sx={{ height: '100%'  }}
     >
       <Box sx={{ position: 'relative' }}>
@@ -40,6 +40,6 @@ export const RecentActivityCard: React.FC = () => {
           </Box>
         ))}
       </Box>
-    </ApexAdvancedCard>
+    </VrmaAdvancedCard>
   );
 };

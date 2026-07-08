@@ -1,4 +1,4 @@
-export const APP_NAME = import.meta.env.VITE_APP_NAME ?? 'Apex Starter'
+export const APP_NAME = import.meta.env.VITE_APP_NAME ?? 'Apex Builder'
 export const APP_VERSION = import.meta.env.VITE_APP_VERSION ?? '1.0.0'
 
 export const PAGINATION_DEFAULT_PAGE = 1

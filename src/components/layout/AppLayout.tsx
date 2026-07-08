@@ -14,7 +14,7 @@ import { NAV_ITEMS } from '@core/router/navConfig'
 import { PATHS } from '@core/router/routePaths'
 import { useAppTheme } from '@core/theme'
 import { useAuth } from '@core/auth'
-import { ApexSidebar } from '@apex-ui/components/core-framework/ApexSidebar'
+import { ApexSidebar } from './AppSidebar'
 
 import logoImg from '@assets/Apex_logo_horizontal_white.png'
 

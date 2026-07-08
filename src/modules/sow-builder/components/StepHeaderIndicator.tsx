@@ -23,7 +23,7 @@ interface StepHeaderIndicatorProps {
   currentStep: number;
 }
 
-const STEPS = ['Context', 'Industry', 'Services', 'Configure', 'Review'];
+const STEPS = ['Context', 'Industry', 'Delivery Model', 'Commercial', 'Review'];
 
 export const StepHeaderIndicator: React.FC<StepHeaderIndicatorProps> = ({ currentStep }) => {
   return (
