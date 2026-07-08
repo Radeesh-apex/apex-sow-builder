@@ -1,7 +1,7 @@
 import { Box } from '@mui/material'
 import VrmaCard from '@apex-ui/components/core-framework/VrmaCard'
-import ApexCheckbox from '@apex-ui/components/core-framework/ApexCheckbox'
-import ApexSelect from '@apex-ui/components/core-framework/ApexSelect'
+import VrmaCheckbox from '@apex-ui/components/core-framework/VrmaCheckbox'
+import VrmaSelect from '@apex-ui/components/core-framework/VrmaSelect'
 import VrmaTextField from '@apex-ui/components/core-framework/VrmaTextField'
 import VrmaAdvancedButton from '@apex-ui/components/core-framework/VrmaAdvancedButton'
 import VrmaTypography from '@apex-ui/components/core-framework/VrmaTypography'
@@ -94,7 +94,7 @@ export default function RegistrationPage() {
 
           <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', sm: 'repeat(2, 1fr)' }, gap: 2, mb: 1 }}>
             <Box sx={{ display: 'flex', flexDirection: 'column', gap: 0.5 }}>
-              <ApexSelect
+              <VrmaSelect
                 label={t.registration.role} value={fields.role} options={roleOptions}
                 onChange={(v) => handleFieldChange('role', String(v))}
                 fullWidth width="100%" size="medium" labelSize={14}
@@ -104,7 +104,7 @@ export default function RegistrationPage() {
               )}
             </Box>
             <Box sx={{ display: 'flex', flexDirection: 'column', gap: 0.5 }}>
-              <ApexSelect
+              <VrmaSelect
                 label={t.registration.department} value={fields.department} options={departmentOptions}
                 onChange={(v) => handleFieldChange('department', String(v))}
                 fullWidth width="100%" size="medium" labelSize={14}
@@ -117,7 +117,7 @@ export default function RegistrationPage() {
 
           <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1.5, mb: 2 }}>
             <Box>
-              <ApexCheckbox
+              <VrmaCheckbox
                 label={t.registration.agreeTerms}
                 checked={fields.agreeTerms}
                 onChange={(v) => { if (typeof v === 'boolean') handleCheckboxChange('agreeTerms', v) }}
@@ -129,7 +129,7 @@ export default function RegistrationPage() {
                 </VrmaTypography>
               )}
             </Box>
-            <ApexCheckbox
+            <VrmaCheckbox
               label={t.registration.subscribeUpdates}
               checked={fields.subscribeUpdates}
               onChange={(v) => { if (typeof v === 'boolean') handleCheckboxChange('subscribeUpdates', v) }}
